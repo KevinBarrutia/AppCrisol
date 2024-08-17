@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">appLibreria</string>
+
+    <string name="ht_email">Ingresa tu correo electrónico</string>
+    <string name="ht_password">Ingresa tu contraseña</string>
+    <string name="bt_login">Ingresar</string>
+    <string name="bt_register"><u>Regístrarse</u></string>
+    <string name="no_account_message">¿No tienes una cuenta?</string>
+
+    <string name="logo_description">Logo de la aplicación</string>
+
+    <string name="label_home_menu">Inicio</string>
+    <string name="label_profile_menu">Perfil</string>
+    <string name="label_cart_menu">Carrito</string>
+    <string name="label_more_menu">Más</string>
+    <string name="label_details">Detalles</string>
+    <string name="cover_book_description">Book Cover</string>
+    <string name="add_to_cart_value">Agregar al Carrito</string>
+    <string name="buy_now_value">Comprar Ahora</string>
+    <string name="label_search_menu">Buscar</string>
+
+    <string name="tilNombre">Ingrese su nombre</string>
+    <string name="tilApellidos">Ingrese su apellido</string>
+    <string name="tilCorreo">Ingrese su correo</string>
+    <string name="tilContrasena">Ingrese su contraseña</string>
+    <string name="btnRegistrarse">Registrarse</string>
+    <string name="tvIngresa">¿Ya tienes una cuenta? Ingresa</string>
+
+    <string name="book_category_1">Los más destacado</string>
+    <string name="book_category_2">Recientemente agregado</string>
+    <string name="book_category_3">Lo más vendido</string>
+    <string name="book_category_4">Libros infantiles</string>
+
+
+    <string name="user_profile_img">User profile img</string>
+    <string name="tvNombre">Nombre de Usuario</string>
+    <string name="tvEmail">Correo del Usuario</string>
+    <string name="tvContrasena">Contraseña del Usuario</string>
+    <string name="tvNombrePerfil">Nombre de Perfil</string>
+    <string name="tvEmailPerfil">Email de Perfil</string>
+    <string name="product_count">Total %d productos</string>
+    <string name="tv_total_price"><strong>S/%.2f</strong></string>
+</resources>

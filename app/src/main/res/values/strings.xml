@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">appLibreria</string>
+
+    <string name="ht_email">Ingresa tu correo electrónico</string>
+    <string name="ht_password">Ingresa tu contraseña</string>
+    <string name="bt_login">Ingresar</string>
+    <string name="bt_register"><u>Regístrarse</u></string>
+    <string name="no_account_message">¿No tienes una cuenta?</string>
+
+    <string name="logo_description">Logo de la aplicación</string>
+
+    <string name="label_home_menu">Home</string>
+    <string name="label_profile_menu">Profile</string>
+    <string name="label_cart_menu">Cart</string>
+    <string name="label_more_menu">More</string>
+    <string name="label_details">Details</string>
+    <string name="cover_book_description">Book Cover</string>
+    <string name="add_to_cart_value">Add to Cart</string>
+    <string name="buy_now_value">Buy Now</string>
+    <string name="label_search_menu">Search</string>
+
+    <string name="tilNombre">Ingrese su nombre</string>
+    <string name="tilApellidos">Ingrese su apellido</string>
+    <string name="tilCorreo">Ingrese su correo</string>
+    <string name="tilContrasena">Ingrese su contraseña</string>
+    <string name="btnRegistrarse">Registrarse</string>
+    <string name="tvIngresa">¿Ya tienes una cuenta? Ingresa</string>
+
+    <string name="book_category_1">Top Selling</string>
+    <string name="book_category_2">Recently added</string>
+    <string name="book_category_3">Business Books </string>
+    <string name="book_category_4">Kid Books </string>
+
+
+    <string name="user_profile_img">User profile img</string>
+    <string name="tvNombre">Nombre de Usuario</string>
+    <string name="tvEmail">Correo del Usuario</string>
+    <string name="tvContrasena">Contraseña del Usuario</string>
+    <string name="tvNombrePerfil">Nombre de Perfil</string>
+    <string name="tvEmailPerfil">Email de Perfil</string>
+    <string name="product_count">Total %d productos</string>
+    <string name="tv_total_price"><strong>S/%.2f</strong></string>
+
+
+</resources>

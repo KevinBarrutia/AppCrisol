@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/carousel_item_container"
+    android:layout_width="100dp"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/carousel_image_view"
+            android:layout_width="100dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:elevation="10dp"
+            android:paddingHorizontal="4dp"
+            android:scaleType="fitXY"
+            app:shapeAppearance="@style/ShapeAppearance.Material3.Corner.Medium"
+            app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Medium"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+
+            android:id="@+id/book_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:maxLines="2"
+            android:paddingTop="8dp"
+            android:textAppearance="?attr/textAppearanceBodySmall"
+            android:layout_gravity="top|start"
+            android:text="TextView" />
+</LinearLayout>

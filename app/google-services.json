@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "610320324738",
+    "project_id": "applibreriacrisol-42797",
+    "storage_bucket": "applibreriacrisol-42797.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:610320324738:android:d41d433c9b85161fd9bc9b",
+        "android_client_info": {
+          "package_name": "pe.edu.crisol.libreria"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAPUFRdORLI5NAK_7MwK1z_glAPqFZnU_0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
