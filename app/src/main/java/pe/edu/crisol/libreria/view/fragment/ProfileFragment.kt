@@ -52,14 +52,22 @@ class ProfileFragment : Fragment() {
                     binding.tvEmailPerfil.setText(user.correo)
                     binding.tvContrasena.setText(user.contrasena)
                 } else {
-                    Toast.makeText(context, "No se encontraron datos", Toast.LENGTH_SHORT).show()
+                    // Verifica si el Fragment está agregado al Activity antes de mostrar el Toast
+                    if (isAdded) {
+                        Toast.makeText(requireContext(), "No se encontraron datos", Toast.LENGTH_SHORT).show()
+                    }
                 }
             }
+
             override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(context, "Error al obtener datos", Toast.LENGTH_SHORT).show()
+                // Verifica si el Fragment está agregado al Activity antes de mostrar el Toast
+                if (isAdded) {
+                    Toast.makeText(requireContext(), "Error al obtener datos", Toast.LENGTH_SHORT).show()
+                }
             }
         })
     }
+
 
 
 }

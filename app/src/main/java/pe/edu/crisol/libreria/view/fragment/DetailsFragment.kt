@@ -1,5 +1,6 @@
 package pe.edu.crisol.libreria.view.fragment
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.Html
 import android.util.Log
@@ -45,6 +46,7 @@ class DetailsFragment : Fragment(), MenuProvider {
 
     private var bookId = ""
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -100,21 +102,23 @@ class DetailsFragment : Fragment(), MenuProvider {
 
         detailsViewModel.book.observe(viewLifecycleOwner, Observer { book ->
             book?.let {
-                Glide.with(view.context)
-                    .load(book.volumeInfo.imageLinks.thumbnail)
-                    .into(binding.bookCoverDetails)
-                binding.bookTitleDetails.text = book.volumeInfo.title
-                binding.bookAuthorsDetails.text = book.volumeInfo.authors.joinToString()
-                binding.bookPriceDetails.text =
-                    "${book.saleInfo?.listPrice?.currencyCode} ${book.saleInfo?.listPrice?.amount}"
-                binding.titleDescription.text = "About this book"
-                binding.contentDescription.text =
-                    Html.fromHtml(book.volumeInfo.description, Html.FROM_HTML_MODE_COMPACT)
+                binding.let { binding ->
+                    Glide.with(view.context)
+                        .load(book.volumeInfo.imageLinks.thumbnail)
+                        .into(binding.bookCoverDetails)
+                    binding.bookTitleDetails.text = book.volumeInfo.title
+                    binding.bookAuthorsDetails.text = book.volumeInfo.authors.joinToString()
+                    binding.bookPriceDetails.text =
+                        "${book.saleInfo?.listPrice?.currencyCode} ${book.saleInfo?.listPrice?.amount}"
+                    binding.titleDescription.text = "About this book"
+                    binding.contentDescription.text =
+                        Html.fromHtml(book.volumeInfo.description, Html.FROM_HTML_MODE_COMPACT)
 
-                binding.addShoppingCart.setOnClickListener {
-                    addToShoppingCart()
-                    shoppingCartViewModel.addToCart(book)
-                    Snackbar.make(view, "Book added to cart", Snackbar.LENGTH_SHORT).show()
+                    binding.addShoppingCart.setOnClickListener {
+                        addToShoppingCart()
+                        shoppingCartViewModel.addToCart(book)
+                        Snackbar.make(view, "Book added to cart", Snackbar.LENGTH_SHORT).show()
+                    }
                 }
             }
         })
