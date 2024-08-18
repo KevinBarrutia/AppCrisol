@@ -37,14 +37,14 @@
             android:breakStrategy="high_quality"
             android:ellipsize="end"
             android:maxLines="2"
-            tools:text="Text"
             android:textAppearance="?attr/textAppearanceTitleMedium"
             app:layout_constraintBottom_toTopOf="@+id/book_author"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/book_author"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed"
-            app:layout_wrapBehaviorInParent="horizontal_only" />
+            app:layout_wrapBehaviorInParent="horizontal_only"
+            tools:text="Text" />
 
         <TextView
             android:id="@+id/book_author"
@@ -70,6 +70,20 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toEndOf="@+id/book_cover"
             app:layout_constraintTop_toBottomOf="@+id/book_author" />
+
+        <Button
+            android:id="@+id/btnEliminar"
+            android:layout_width="90dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            android:backgroundTint="#9D0707"
+            android:text="Eliminar"
+            android:textAlignment="textStart"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/book_title" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

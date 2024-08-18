@@ -39,7 +39,7 @@
             android:hint="@string/ht_email"
             android:inputType="text"
             android:padding="15dp"
-            android:textColor="@color/my_pale_gray"
+            android:textColor="@color/black"
 
             android:textSize="12sp" />
 
@@ -53,10 +53,9 @@
             android:drawableEnd="@drawable/ic_login_password"
             android:ems="10"
             android:hint="@string/ht_password"
-            android:inputType="text"
+            android:inputType="text|textPassword"
             android:padding="15dp"
-            android:textColor="@color/my_pale_gray"
-
+            android:textColor="@color/black"
             android:textSize="12sp" />
 
         <Button
