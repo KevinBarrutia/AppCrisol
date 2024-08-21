@@ -13,7 +13,7 @@
     <string name="label_profile_menu">Profile</string>
     <string name="label_cart_menu">Cart</string>
     <string name="label_more_menu">More</string>
-    <string name="label_details">Details</string>
+    <string name="label_book_detail_menu">Book Detail</string>
     <string name="cover_book_description">Book Cover</string>
     <string name="add_to_cart_value">Add to Cart</string>
     <string name="buy_now_value">Buy Now</string>
@@ -39,7 +39,11 @@
     <string name="tvNombrePerfil">Nombre de Perfil</string>
     <string name="tvEmailPerfil">Email de Perfil</string>
     <string name="product_count">Total %d productos</string>
-    <string name="tv_total_price"><strong>S/%.2f</strong></string>
+    <string name="tv_total_price"><strong>S/. %.2f</strong></string>
+    <string name="btn_delete">Eliminar</string>
+    <string name="text_description">Synopsis</string>
+    <string name="rating_star">rating star</string>
+    <string name="book_cover">book cover</string>
 
 
 </resources>

@@ -5,6 +5,7 @@ plugins {
     id("androidx.navigation.safeargs.kotlin")
     //Google service gradle plugin
     id("com.google.gms.google-services")
+    id("dagger.hilt.android.plugin")
 }
 
 android {
@@ -70,6 +71,14 @@ dependencies {
     implementation("com.google.firebase:firebase-database-ktx:20.3.1")
     implementation("com.google.firebase:firebase-firestore-ktx:24.11.1")
     implementation("com.google.firebase:firebase-database:20.3.1")
+
+
+    //Hilt
+    implementation("com.google.dagger:hilt-android:2.48")
+    implementation("androidx.paging:paging-common-android:3.3.2")
+    implementation("androidx.paging:paging-runtime-ktx:3.3.2")
+    implementation("com.squareup.picasso:picasso:2.71828")
+    kapt("com.google.dagger:hilt-android-compiler:2.48")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")

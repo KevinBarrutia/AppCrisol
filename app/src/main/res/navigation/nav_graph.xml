@@ -7,62 +7,45 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="pe.edu.crisol.libreria.view.fragment.HomeFragment"
+        android:name="pe.edu.crisol.libreria.ui.home.HomeFragment"
         android:label="@string/label_home_menu"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/action_homeFragment_to_detailsFragment"
-            app:destination="@id/detailsFragment"/>
+            app:destination="@id/bookDetailFragment"/>
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
-        android:name="pe.edu.crisol.libreria.view.fragment.SearchFragment"
+        android:name="pe.edu.crisol.libreria.ui.search.SearchFragment"
         android:label="@string/label_search_menu"
         tools:layout="@layout/fragment_search">
         <action
             android:id="@+id/action_searchFragment_to_detailsFragment"
-            app:destination="@id/detailsFragment" />
+            app:destination="@id/bookDetailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/detailsFragment"
-        android:name="pe.edu.crisol.libreria.view.fragment.DetailsFragment"
-        android:label="@string/label_details"
-        tools:layout="@layout/fragment_details">
+        android:id="@+id/bookDetailFragment"
+        android:name="pe.edu.crisol.libreria.ui.detail.BookDetailFragment"
+        android:label="@string/label_book_detail_menu"
+        tools:layout="@layout/fragment_book_detail">
         <argument
             android:name="book_id"
             app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="pe.edu.crisol.libreria.view.fragment.ProfileFragment"
+        android:name="pe.edu.crisol.libreria.ui.profile.ProfileFragment"
         android:label="@string/label_profile_menu"
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/moreFragment"
-        android:name="pe.edu.crisol.libreria.view.fragment.MoreFragment"
+        android:name="pe.edu.crisol.libreria.ui.more.MoreFragment"
         android:label="@string/label_more_menu"
-        tools:layout="@layout/fragment_more" >
-        <action
-            android:id="@+id/action_moreFragment_to_wishListFragment"
-            app:destination="@id/wishListFragment" />
-    </fragment>
-        <action
-            android:id="@+id/action_moreFragment_to_wishListFragment"
-            app:destination="@id/wishListFragment" />
+        tools:layout="@layout/fragment_more" />
 
     <fragment
         android:id="@+id/shoppingCartFragment"
-        android:name="pe.edu.crisol.libreria.view.fragment.ShoppingCartFragment"
+        android:name="pe.edu.crisol.libreria.ui.checkout.cart.CartFragment"
         android:label="@string/label_cart_menu"
-        tools:layout="@layout/fragment_shopping_cart" />
-    <fragment
-        android:id="@+id/wishListFragment"
-        android:name="pe.edu.crisol.libreria.view.fragment.WishListFragment"
-        android:label="fragment_wish_list"
-        tools:layout="@layout/fragment_wish_list" >
-
-        <action
-            android:id="@+id/action_wishListFragment_to_moreFragment"
-            app:destination="@id/moreFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_cart" />
 </navigation>
