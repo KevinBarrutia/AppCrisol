@@ -1,6 +1,7 @@
 package pe.edu.crisol.libreria.ui.detail
 
 import android.os.Bundle
+import android.text.Html
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.Menu
@@ -17,16 +18,22 @@ import androidx.lifecycle.Lifecycle
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.navArgs
 import androidx.navigation.ui.NavigationUI
+import com.squareup.picasso.Picasso
+import dagger.hilt.android.AndroidEntryPoint
 import pe.edu.crisol.libreria.R
 import pe.edu.crisol.libreria.databinding.FragmentBookDetailBinding
+import pe.edu.crisol.libreria.domain.model.Book
+import pe.edu.crisol.libreria.util.IMAGE_URL
+import pe.edu.crisol.libreria.util.SUFFIX_URL
 
+@AndroidEntryPoint
 class BookDetailFragment : Fragment(), MenuProvider {
 
     private var _binding: FragmentBookDetailBinding? = null
     private val binding get() = _binding!!
 
     private val args: BookDetailFragmentArgs by navArgs()
-    private val bookDetailViewModel: BookDetailViewModel by viewModels()
+    private val viewModel: BookDetailViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -50,20 +57,28 @@ class BookDetailFragment : Fragment(), MenuProvider {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val bookId = args.bookId
 
-        bookDetailViewModel.loadBookDetail(bookId)
+        viewModel.loadBookDetails(args.bookId)
 
-        bookDetailViewModel.bookDetail.observe(viewLifecycleOwner) { book ->
-            book?.let {
-                binding.bookTitle.text = book.title
-                binding.bookAuthors.text = book.authors.joinToString()
-                binding.bookPrice.text = book.price.toString()
-                binding.bookDescription.text = book.description
-            }
-
+        viewModel.book.observe(viewLifecycleOwner) { book ->
+            bindBookDetails(book)
         }
     }
+
+    private fun bindBookDetails(book: Book) {
+        binding.apply {
+            bookTitle.text = book.title
+            bookAuthor.text = book.authors.joinToString()
+            bookSubtitle.text = book.subtitle
+            bookRating.text = book.rating.toString()
+            buyButton.text = getString(R.string.tv_total_price, book.price)
+            bookDescription.text = Html.fromHtml(book.description, Html.FROM_HTML_MODE_COMPACT)
+            Picasso.get()
+                .load(book.cover.ifEmpty { IMAGE_URL + book.isbn + SUFFIX_URL })
+                .into(bookCover)
+        }
+    }
+
 
     override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
         menuInflater.inflate(R.menu.menu_book_detail, menu)

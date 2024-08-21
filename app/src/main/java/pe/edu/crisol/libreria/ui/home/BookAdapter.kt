@@ -31,17 +31,10 @@ class BookAdapter(private val onBookClick: (Book) -> Unit) : PagingDataAdapter<B
 
         fun bind(book: Book) {
             binding.apply {
-                if (book.cover.isNotBlank()) {
-                    Picasso.get()
-                        .load(book.cover)
-                        .placeholder(R.color.md_theme_dark_onBackground)
-                        .into(bookCover)
-                } else {
-                    Picasso.get()
-                        .load(IMAGE_URL + book.isbn + SUFFIX_URL)
-                        .placeholder(R.color.md_theme_dark_onBackground)
-                        .into(bookCover)
-                }
+                Picasso.get()
+                    .load(book.cover.ifEmpty { IMAGE_URL + book.isbn + SUFFIX_URL })
+                    .placeholder(R.color.colorBackground)
+                    .into(bookCover)
 
                 bookTitle.text = book.title
                 bookSubtitle.text = book.subtitle

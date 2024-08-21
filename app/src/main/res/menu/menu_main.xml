@@ -14,7 +14,7 @@
         android:title="@string/label_search_menu" />
     <item
         android:id="@+id/shoppingCartFragment"
-        android:icon="@drawable/ic_shopping_cart"
+        android:icon="@drawable/ic_cart"
         android:title="@string/label_cart_menu" />
     <item
         android:id="@+id/moreFragment"

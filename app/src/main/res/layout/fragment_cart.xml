@@ -47,6 +47,7 @@
         android:id="@+id/btn_go_to_payment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
         android:text="Ir a pagar" />
 
 </LinearLayout>

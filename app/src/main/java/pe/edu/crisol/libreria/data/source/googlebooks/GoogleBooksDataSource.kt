@@ -16,6 +16,11 @@ class GoogleBooksDataSource @Inject constructor(
         return response.items?.map { it.toBook() } ?: emptyList()
     }
 
+    suspend fun getBook(id: String): Book {
+        val response = apiService.getBook(id)
+        return response.toBook()
+    }
+
     private fun BookResponse.toBook(): Book {
         return Book(
             id = this.id,

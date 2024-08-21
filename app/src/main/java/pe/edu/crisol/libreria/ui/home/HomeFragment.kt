@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
@@ -42,6 +43,9 @@ class HomeFragment : Fragment() {
         // Inicializa el SectionAdapter con una lista vacía
         sectionAdapter = SectionAdapter(emptyList(), lifecycleScope) { book ->
             // Acción al hacer clic en un libro (navegación o detalle)
+/*            val action = HomeFragmentDirections.actionHomeFragmentToDetailsFragment(bookId = book.id)
+            findNavController().navigate(action)
+            Log.d("HomeFragment", "Clicked on book: ${book.title}")*/
         }
         binding.recyclerView.layoutManager = LinearLayoutManager(requireContext())
         binding.recyclerView.adapter = sectionAdapter
@@ -70,6 +74,10 @@ class HomeFragment : Fragment() {
                     // Actualiza el adaptador con las nuevas secciones
                     sectionAdapter = SectionAdapter(sections, lifecycleScope) { book ->
                         // Acción al hacer clic en un libro
+                        Log.d("HomeFragment", "Clicked on book: ${book.title}")
+                        val action = HomeFragmentDirections.actionHomeFragmentToDetailsFragment(bookId = book.id)
+                        findNavController().navigate(action)
+
                     }
 
                     binding.recyclerView.adapter = sectionAdapter

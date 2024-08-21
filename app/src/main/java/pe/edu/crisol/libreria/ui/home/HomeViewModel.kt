@@ -24,7 +24,7 @@ class HomeViewModel @Inject constructor(
 ) : ViewModel() {
 
     private val sections = mapOf(
-        "Mejores Libros" to "subject:best_sellers",
+        "Los Mejores Libros" to "subject:best_sellers",
         "Magia y Fantasía" to "subject:magia",
         "Historia" to "subject:historia",
         "Guerra" to "subject:guerra",

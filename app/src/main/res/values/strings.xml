@@ -44,6 +44,8 @@
     <string name="text_description">Synopsis</string>
     <string name="rating_star">rating star</string>
     <string name="book_cover">book cover</string>
+    <string name="arrow_icon">arrow forward</string>
+    <string name="reviewer_avatar">reviewer avatar</string>
 
 
 </resources>
